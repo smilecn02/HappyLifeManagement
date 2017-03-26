@@ -1,0 +1,86 @@
+
+ ************* 2017-03-26 13:47:09,665 [8] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:49:38,292 [8] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:50:16,972 [7] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:53:15,565 [13] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:55:37,172 [15] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:56:24,345 [11] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:56:35,517 [11] ERROR MvcHandler **************  
+ System.Web.HttpException (0x80004005): The controller for path '/bundles/jqueryval' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) 
+ 
+ ************* 2017-03-26 13:56:35,615 [15] ERROR MvcHandler **************  
+ System.Web.HttpException (0x80004005): The controller for path '/bundles/jqueryval' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) 
+ 
+ ************* 2017-03-26 13:57:04,426 [18] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 13:57:14,446 [16] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 15:58:58,273 [9] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 16:02:58,022 [11] ERROR MvcHandler **************  
+ System.Web.HttpException (0x80004005): The controller for path '/bundles/jqueryval' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) 
+ 
+ ************* 2017-03-26 16:03:09,002 [11] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 16:35:28,875 [11] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 16:39:47,930 [10] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 16:40:55,033 [21] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 17:35:59,977 [7] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 
+ ************* 2017-03-26 17:36:59,767 [5] ERROR MvcHandler **************  
+ System.Web.HttpException (0x80004005): The controller for path '/bundles/jqueryval' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) 
+ 
+ ************* 2017-03-26 17:38:37,578 [8] INFO MvcHandler **************  
+ ***** Debug Notes Controller ***** 
+ 

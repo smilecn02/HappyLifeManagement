@@ -1,0 +1,51 @@
+﻿@model HappyLifeManagement.Data.Entity.Note
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Note</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dd>
+            <h3>@Html.DisplayFor(model => model.Title)</h3>
+        </dd>
+
+        <dd>
+            @Html.Raw(Model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags)
+        </dt>
+
+        <dd>
+            <span class="label label-primary">@Model.Tags</span>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-success" }) 
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info" })
+</p>

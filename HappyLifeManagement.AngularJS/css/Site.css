@@ -1,0 +1,37 @@
+﻿
+
+/* My custom bootstrap */
+.navbar-inverse {
+    background: #008EFF;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background: #C7CC14;
+}
+
+
+/*
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+    table tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+*/
