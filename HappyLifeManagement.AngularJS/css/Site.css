@@ -20,18 +20,13 @@
 }
 
 
-/*
-table, th, td {
-    border: 1px solid grey;
-    border-collapse: collapse;
-    padding: 5px;
+#loading-bar .bar {
+  background: #FF6327;
 }
-
-    table tr:nth-child(odd) {
-        background-color: #f2f2f2;
-    }
-
-    table tr:nth-child(even) {
-        background-color: #ffffff;
-    }
-*/
+#loading-bar .peg {
+  box-shadow: 0 0 10px #2c3e50, 0 0 5px #2c3e50;
+}
+#loading-bar-spinner .spinner-icon {
+  border-top-color:  #FF6327;
+  border-left-color: #FF6327;
+}

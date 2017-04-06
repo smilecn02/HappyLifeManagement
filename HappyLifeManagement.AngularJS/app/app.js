@@ -1,9 +1,13 @@
 ﻿'use strict';
 
-//var app = angular.module("myApp", ['ngSanitize', '$http']);
-
-var app = angular.module('myApp', ['ngSanitize', 'ngRoute', 'ui.bootstrap', 'bw.paging']);
-
+var app = angular.module('myApp',
+    [
+        'ngSanitize',
+        'ngRoute',
+        'ui.bootstrap',
+        'bw.paging',
+        'chieffancypants.loadingBar', 'ngAnimate'
+    ]);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -15,11 +19,11 @@ app.config(function ($routeProvider) {
         templateUrl: "app/paging/paging.view.html",
         controller: "PaginationDemoCtrl"
     })
-    .when("/green", {
-        templateUrl: "green.htm"
+    .when("/loading-bar", {
+        templateUrl: "app/loading-bar/loading-bar.view.html"
     })
-    .when("/blue", {
-        templateUrl: "blue.htm"
+    .when("/about", {
+        templateUrl: "app/about/about.view.html"
     });
 });
 

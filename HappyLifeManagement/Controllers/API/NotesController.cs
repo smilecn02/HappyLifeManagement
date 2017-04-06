@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
@@ -21,6 +22,8 @@ namespace HappyLifeManagement.Controllers.API
         // GET: api/Notes
         public IHttpActionResult GetNotes(int? page=1)
         {
+            //Thread.Sleep(3000);
+
             int pageSie = 2;
 
             var data = new KTPagedList<Note>(database.Notes.OrderByDescending(i => i.UpdatedDate), page, pageSie);
