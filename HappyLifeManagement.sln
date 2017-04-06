@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyLifeManagement.Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HappyLifeManagement.AngularJS", "HappyLifeManagement.AngularJS\HappyLifeManagement.AngularJS.csproj", "{328E90A2-1D42-4AD8-B640-16828B868654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{328E90A2-1D42-4AD8-B640-16828B868654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{328E90A2-1D42-4AD8-B640-16828B868654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{328E90A2-1D42-4AD8-B640-16828B868654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

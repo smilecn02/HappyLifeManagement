@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{328E90A2-1D42-4AD8-B640-16828B868654}</ProjectGuid>
+    <ProjectGuid>{28D8D391-72E9-498A-BF9C-0E6978D4D9A6}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HappyLifeManagement.AngularJS</RootNamespace>
-    <AssemblyName>HappyLifeManagement.AngularJS</AssemblyName>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -66,48 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\note\note.controller.js" />
-    <Content Include="app\note\note.view.html" />
-    <Content Include="app\note\note.service.js" />
-    <Content Include="blue.htm" />
-    <Content Include="bower_components\angular-route\angular-route.js" />
-    <Content Include="bower_components\angular-route\angular-route.min.js" />
-    <Content Include="bower_components\angular-route\index.js" />
-    <Content Include="bower_components\angular-sanitize\angular-sanitize.js" />
-    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js" />
-    <Content Include="bower_components\angular-sanitize\index.js" />
-    <Content Include="bower_components\angular\angular-csp.css" />
-    <Content Include="bower_components\angular\angular.js" />
-    <Content Include="bower_components\angular\angular.min.js" />
-    <Content Include="bower_components\angular\index.js" />
-    <Content Include="Content\ui-bootstrap-csp.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="data.txt" />
-    <Content Include="green.htm" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery.js" />
-    <Content Include="main.htm" />
     <Content Include="packages.config" />
-    <Content Include="bower_components\angular\.bower.json" />
-    <Content Include="bower_components\angular\angular.min.js.gzip" />
-    <Content Include="bower_components\angular\angular.min.js.map" />
-    <Content Include="bower_components\angular\bower.json" />
-    <Content Include="bower_components\angular\LICENSE.md" />
-    <Content Include="bower_components\angular\package.json" />
-    <Content Include="bower_components\angular\README.md" />
-    <Content Include="bower_components\angular-sanitize\.bower.json" />
-    <Content Include="bower_components\angular-sanitize\angular-sanitize.min.js.map" />
-    <Content Include="bower_components\angular-sanitize\bower.json" />
-    <Content Include="bower_components\angular-sanitize\package.json" />
-    <Content Include="bower_components\angular-sanitize\README.md" />
-    <Content Include="bower.json" />
-    <Content Include="bower_components\angular-route\.bower.json" />
-    <Content Include="bower_components\angular-route\angular-route.min.js.map" />
-    <Content Include="bower_components\angular-route\bower.json" />
-    <Content Include="bower_components\angular-route\package.json" />
-    <Content Include="bower_components\angular-route\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -116,23 +75,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.js" />
-    <Content Include="css\Site.css" />
-    <Content Include="index3.html" />
-    <Content Include="index.html" />
-    <Content Include="red.htm" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
-    <Content Include="testAngularJS.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="fonts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -147,9 +93,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>21624</DevelopmentServerPort>
+          <DevelopmentServerPort>7260</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:21624/</IISUrl>
+          <IISUrl>http://localhost:7260/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

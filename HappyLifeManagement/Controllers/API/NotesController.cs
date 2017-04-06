@@ -10,21 +10,22 @@ using System.Web.Http.Description;
 
 namespace HappyLifeManagement.Controllers.API
 {
+    [RoutePrefix("api/notes")]
     public class NotesController : ApiController
     {
-        private HappyLifeManagementContext db = new HappyLifeManagementContext();
+        private HappyLifeManagementContext database = new HappyLifeManagementContext();
 
         // GET: api/Notes
-        public IQueryable<Note> GetNotes()
+        public IHttpActionResult GetNotes()
         {
-            return db.Notes.OrderByDescending(i => i.UpdatedDate);
+            return Ok(database.Notes.OrderByDescending(i => i.UpdatedDate));
         }
 
         // GET: api/Notes/5
         [ResponseType(typeof(Note))]
         public IHttpActionResult GetNote(Guid id)
         {
-            Note note = db.Notes.Find(id);
+            Note note = database.Notes.Find(id);
             if (note == null)
             {
                 return NotFound();
@@ -47,11 +48,11 @@ namespace HappyLifeManagement.Controllers.API
                 return BadRequest();
             }
 
-            db.Entry(note).State = EntityState.Modified;
+            database.Entry(note).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                database.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -77,11 +78,11 @@ namespace HappyLifeManagement.Controllers.API
                 return BadRequest(ModelState);
             }
 
-            db.Notes.Add(note);
+            database.Notes.Add(note);
 
             try
             {
-                db.SaveChanges();
+                database.SaveChanges();
             }
             catch (DbUpdateException)
             {
@@ -102,14 +103,14 @@ namespace HappyLifeManagement.Controllers.API
         [ResponseType(typeof(Note))]
         public IHttpActionResult DeleteNote(Guid id)
         {
-            Note note = db.Notes.Find(id);
+            Note note = database.Notes.Find(id);
             if (note == null)
             {
                 return NotFound();
             }
 
-            db.Notes.Remove(note);
-            db.SaveChanges();
+            database.Notes.Remove(note);
+            database.SaveChanges();
 
             return Ok(note);
         }
@@ -118,14 +119,14 @@ namespace HappyLifeManagement.Controllers.API
         {
             if (disposing)
             {
-                db.Dispose();
+                database.Dispose();
             }
             base.Dispose(disposing);
         }
 
         private bool NoteExists(Guid id)
         {
-            return db.Notes.Count(e => e.Id == id) > 0;
+            return database.Notes.Count(e => e.Id == id) > 0;
         }
     }
 }

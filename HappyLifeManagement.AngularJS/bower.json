@@ -1,0 +1,22 @@
+{
+  "name": "HappyLifeManagement.AngularJS",
+  "homepage": "https://github.com/smilecn02/HappyLifeManagement",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Duong Khac Trinh"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.2",
+    "angular-sanitize": "1.4.2",
+    "angular-route": "1.4.2"
+  }
+}
