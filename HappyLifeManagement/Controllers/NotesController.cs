@@ -17,7 +17,7 @@ namespace HappyLifeManagement.Controllers
         // GET: Notes
         public ActionResult Index(int? page)
         {
-            WriteLog.LogInfo("***** Debug Notes Controller *****");
+            //WriteLog.LogInfo("***** Debug Notes Controller *****");
 
             int pageSize = 10;
             int pageNumber = (page ?? 1);

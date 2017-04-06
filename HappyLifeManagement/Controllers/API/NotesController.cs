@@ -1,24 +1,31 @@
 ﻿using HappyLifeManagement.Data;
 using HappyLifeManagement.Data.Entity;
+using KT.Core;
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 
 namespace HappyLifeManagement.Controllers.API
 {
     [RoutePrefix("api/notes")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class NotesController : ApiController
     {
         private HappyLifeManagementContext database = new HappyLifeManagementContext();
 
         // GET: api/Notes
-        public IHttpActionResult GetNotes()
+        public IHttpActionResult GetNotes(int? page=1)
         {
-            return Ok(database.Notes.OrderByDescending(i => i.UpdatedDate));
+            int pageSie = 2;
+
+            var data = new KTPagedList<Note>(database.Notes.OrderByDescending(i => i.UpdatedDate), page, pageSie);
+
+            return Ok(data);
         }
 
         // GET: api/Notes/5

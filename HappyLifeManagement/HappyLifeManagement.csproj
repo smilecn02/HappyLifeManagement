@@ -340,6 +340,10 @@
       <Project>{05cafa70-f818-4760-9ee5-a294c88debd9}</Project>
       <Name>HappyLifeManagement.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KT.Core\KT.Core.csproj">
+      <Project>{1ee73a73-9080-426d-bfac-63537c750ee6}</Project>
+      <Name>KT.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -69,7 +69,15 @@
     <Content Include="app\note\note.controller.js" />
     <Content Include="app\note\note.view.html" />
     <Content Include="app\note\note.service.js" />
+    <Content Include="app\paging\paging.controller.js" />
+    <Content Include="app\paging\paging.view.html" />
     <Content Include="blue.htm" />
+    <Content Include="bower_components\angular-paging\dist\paging.js" />
+    <Content Include="bower_components\angular-paging\dist\paging.min.js" />
+    <Content Include="bower_components\angular-paging\Gruntfile.js" />
+    <Content Include="bower_components\angular-paging\src\app.js" />
+    <Content Include="bower_components\angular-paging\src\index.html" />
+    <Content Include="bower_components\angular-paging\src\paging.js" />
     <Content Include="bower_components\angular-route\angular-route.js" />
     <Content Include="bower_components\angular-route\angular-route.min.js" />
     <Content Include="bower_components\angular-route\index.js" />
@@ -108,6 +116,14 @@
     <Content Include="bower_components\angular-route\bower.json" />
     <Content Include="bower_components\angular-route\package.json" />
     <Content Include="bower_components\angular-route\README.md" />
+    <Content Include="bower_components\angular-paging\.bower.json" />
+    <Content Include="bower_components\angular-paging\bower.json" />
+    <Content Include="bower_components\angular-paging\CHANGELOG.md" />
+    <Content Include="bower_components\angular-paging\dist\README.md" />
+    <Content Include="bower_components\angular-paging\LICENSE" />
+    <Content Include="bower_components\angular-paging\package.json" />
+    <Content Include="bower_components\angular-paging\README.md" />
+    <Content Include="bower_components\angular-paging\src\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

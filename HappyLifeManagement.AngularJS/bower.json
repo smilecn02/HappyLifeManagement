@@ -17,6 +17,7 @@
   "dependencies": {
     "angular": "1.4.2",
     "angular-sanitize": "1.4.2",
-    "angular-route": "1.4.2"
+    "angular-route": "1.4.2",
+    "angular-paging": "^2.2.2"
   }
 }

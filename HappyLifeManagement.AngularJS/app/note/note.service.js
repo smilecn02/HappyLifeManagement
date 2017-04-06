@@ -11,6 +11,11 @@ angular.module('myApp')
             return $http.get(url);
         };
 
+        service.GetNotePagings = function (page) {
+            return $http.get(url + "?page=" + page);
+        };
+
+
         return service;
 
     }]);
