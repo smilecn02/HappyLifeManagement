@@ -66,9 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\about\about.directive.js" />
+    <Content Include="app\about\about.directive.view.html" />
     <Content Include="app\about\about.view.html" />
-    <Content Include="app\loading-bar\loading-bar.controller.js" />
-    <Content Include="app\loading-bar\loading-bar.view.html" />
     <Content Include="app\note\note.controller.js" />
     <Content Include="app\note\note.view.html" />
     <Content Include="app\note\note.service.js" />
@@ -100,6 +100,14 @@
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
     <Content Include="bower_components\angular\index.js" />
+    <Content Include="bower_components\ngDialog\css\ngDialog-theme-default.css" />
+    <Content Include="bower_components\ngDialog\css\ngDialog-theme-default.min.css" />
+    <Content Include="bower_components\ngDialog\css\ngDialog-theme-plain.css" />
+    <Content Include="bower_components\ngDialog\css\ngDialog-theme-plain.min.css" />
+    <Content Include="bower_components\ngDialog\css\ngDialog.css" />
+    <Content Include="bower_components\ngDialog\css\ngDialog.min.css" />
+    <Content Include="bower_components\ngDialog\js\ngDialog.js" />
+    <Content Include="bower_components\ngDialog\js\ngDialog.min.js" />
     <Content Include="Content\loading-bar.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="css\bootstrap.css" />
@@ -155,6 +163,10 @@
     <Content Include="bower_components\angular-animate\bower.json" />
     <Content Include="bower_components\angular-animate\package.json" />
     <Content Include="bower_components\angular-animate\README.md" />
+    <Content Include="bower_components\ngDialog\.bower.json" />
+    <Content Include="bower_components\ngDialog\bower.json" />
+    <Content Include="bower_components\ngDialog\package.json" />
+    <Content Include="bower_components\ngDialog\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,6 +179,7 @@
     <Content Include="css\Site.css" />
     <Content Include="demo\index3.html" />
     <Content Include="index.html" />
+    <Content Include="app\about\popupTmpl.html" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
