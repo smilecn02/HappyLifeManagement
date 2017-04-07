@@ -7,8 +7,13 @@ var app = angular.module('myApp',
         'ui.bootstrap',
         'bw.paging',
         'chieffancypants.loadingBar', 'ngAnimate',
-        'ngDialog'
+        'ngDialog',
+        'blockUI'
     ]);
+
+app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
+}]);
 
 app.config(function ($routeProvider) {
     $routeProvider
