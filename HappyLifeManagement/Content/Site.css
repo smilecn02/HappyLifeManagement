@@ -19,6 +19,7 @@ textarea {
 /* My custom bootstrap */
 .navbar-inverse {
     background: #008EFF;
+    border: none;
 }
 
 .navbar-inverse .navbar-brand {
@@ -33,4 +34,15 @@ textarea {
 .navbar-inverse .navbar-nav > .open > a:hover, 
 .navbar-inverse .navbar-nav > .open > a:focus {
     background: #C7CC14;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.div1{
+    background: green;
+    width: 500px;
 }

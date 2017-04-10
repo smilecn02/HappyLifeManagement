@@ -19,7 +19,7 @@ namespace HappyLifeManagement.Controllers
         {
             //WriteLog.LogInfo("***** Debug Notes Controller *****");
 
-            int pageSize = 10;
+            int pageSize = 2;
             int pageNumber = (page ?? 1);
             return View(db.Notes.OrderByDescending(i => i.UpdatedDate).ToPagedList(pageNumber, pageSize));
         }
