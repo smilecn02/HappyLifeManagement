@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Expense.cs" />
+    <Compile Include="Entity\ExpenseCategory.cs" />
     <Compile Include="Entity\Note.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="HappyLifeManagementContext.cs" />

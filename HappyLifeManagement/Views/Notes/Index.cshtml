@@ -8,7 +8,7 @@
 <h2>My Notes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+    @Html.ActionLink("Tạo mới", "Create", null, new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.UpdatedDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class = "btn btn-success btn-xs" }) 
-            @Html.ActionLink("Details", "Details", new { id=item.Id }, new { @class = "btn btn-primary btn-xs" })
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger btn-xs" })
+            @Html.ActionLink("Sửa", "Edit", new { id = item.Id }, new { @class = "btn btn-success btn-xs" })
+            @Html.ActionLink("Chi tiết", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-xs" })
+            @Html.ActionLink("Xóa", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }

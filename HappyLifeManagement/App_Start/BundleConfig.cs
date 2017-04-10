@@ -17,13 +17,17 @@ namespace HappyLifeManagement
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
                       "~/Scripts/summernote/summernote.js",
                       "~/Scripts/respond.js",
+                      "~/Scripts/moment.min.js",
+                      "~/Scripts/bootstrap-datetimepicker.min.js",
+                      "~/Scripts/app/datepicker.js",
                       "~/Scripts/app/home-index.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-datetimepicker.css",
                       "~/Content/font-awesome.css",
                       "~/Content/summernote.css",
                       "~/Content/site.css"));
