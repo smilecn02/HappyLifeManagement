@@ -10,6 +10,7 @@ using HappyLifeManagement.Models;
 
 namespace HappyLifeManagement.Controllers
 {
+    [Authorize(Users = "khactrinhcn02@gmail.com")]
     public class ExpensesController : Controller
     {
         private HappyLifeManagementContext db = new HappyLifeManagementContext();

@@ -54,11 +54,21 @@
     <Compile Include="Entity\Note.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="HappyLifeManagementContext.cs" />
+    <Compile Include="Migrations\201704120150032_Update12042017.cs" />
+    <Compile Include="Migrations\201704120150032_Update12042017.Designer.cs">
+      <DependentUpon>201704120150032_Update12042017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704120150032_Update12042017.resx">
+      <DependentUpon>201704120150032_Update12042017.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
