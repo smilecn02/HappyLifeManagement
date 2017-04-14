@@ -1,12 +1,11 @@
 ﻿using HappyLifeManagement.Data;
 using HappyLifeManagement.Data.Entity;
+using PagedList;
 using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-using PagedList;
-using HappyLifeManagement.Helper;
 
 namespace HappyLifeManagement.Controllers
 {

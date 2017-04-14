@@ -6,6 +6,9 @@ namespace HappyLifeManagement.Models
     {
         public IEnumerable<ExpenseDetailViewModel> CategoryDayExpenseDetails { get; internal set; }
         public string Day { get; set; }
+
+        //Use for sorting.
+        public int DayNumber { get; set; }
         public decimal Sum { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Linq;
 using HappyLifeManagement.Models;
+using PagedList;
 
 namespace HappyLifeManagement.Controllers
 {
@@ -16,13 +17,17 @@ namespace HappyLifeManagement.Controllers
         private HappyLifeManagementContext db = new HappyLifeManagementContext();
 
         // GET: Expenses
-        public async Task<ActionResult> Index()
+        public ActionResult Index(int? page)
         {
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+
             var expenses = db.Expenses.Include(e => e.ExpenseCategory);
+            return View(expenses.OrderByDescending(i => i.ExpenseDate).ToPagedList(pageNumber, pageSize));
+        }
 
-            decimal sumApril = db.Expenses.Where(i => i.ExpenseDate.Month == 4)
-                                      .Sum(i => i.Amount);
-
+        public ActionResult Statistics()
+        {
             DateTime now = DateTime.Now;
 
             DateTime endDateOfThisMonth = new DateTime(now.Year, now.Month, DateTime.DaysInMonth(now.Year, now.Month));
@@ -31,13 +36,14 @@ namespace HappyLifeManagement.Controllers
                 .Select(i => new ExpenseSummaryViewModel
                 {
                     Month = i.Key.Month + "/" + i.Key.Year,
+
                     Sum = i.Sum(j => j.Amount),
 
                     DayMaxSum = i.GroupBy(i11 => i11.ExpenseDate.Day)
                                     .Select(i12 => new { Day = i12.Key, Sum = i12.Sum(i13 => i13.Amount) })
                                     .OrderByDescending(i14 => i14.Sum)
                                     .FirstOrDefault().Day.ToString() + "/" + i.Key.Month.ToString(),
-                                    
+
 
                     ExpenseDetails = i.GroupBy(i1 => i1.ExpenseCategory.Name)
                                         .Select(i2 => new ExpenseDetailViewModel
@@ -52,6 +58,7 @@ namespace HappyLifeManagement.Controllers
                                         .Select(i5 => new DayExpenDetailViewModel
                                         {
                                             Day = i5.Key.ToString() + "/" + i.Key.Month.ToString(),
+                                            DayNumber = i5.Key,
                                             Sum = i5.Sum(i6 => i6.Amount),
                                             CategoryDayExpenseDetails = i5.GroupBy(i6 => i6.ExpenseCategory.Name)
                                                                         .Select(i7 => new ExpenseDetailViewModel
@@ -61,7 +68,8 @@ namespace HappyLifeManagement.Controllers
                                                                         })
                                                                         .OrderByDescending(i10 => i10.Sum)
                                         })
-                                    
+                                        .OrderByDescending(i15 => i15.DayNumber)
+
                 }).ToList();
 
             ViewBag.SummaryQuery = summaryQuery;
@@ -69,9 +77,8 @@ namespace HappyLifeManagement.Controllers
             ViewBag.SummaryYear = db.Expenses.Where(i => i.ExpenseDate.Year == now.Year)
                                             .Sum(i => i.Amount);
 
-            return View(await expenses.ToListAsync());
+            return View();
         }
-
         // GET: Expenses/Details/5
         public async Task<ActionResult> Details(Guid? id)
         {

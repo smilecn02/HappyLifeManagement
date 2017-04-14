@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Statistics";
+}
+
+<h2>Statistics</h2>
+
+<b>Tổng chi phí theo tháng:</b><br /><br />
+
+<table class="table">
+    <tr>
+        <th>Tháng</th>
+        <th>Tổng chi</th>
+        <th>Ngày chi nhiều nhất</th>
+    </tr>
+
+    @foreach (var item in @ViewBag.SummaryQuery)
+    {
+        <tr>
+            <td>
+                @item.Month.ToString()
+            </td>
+
+            <td>
+                @item.Sum.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))
+            </td>
+
+            <td>
+                @item.DayMaxSum
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table" border="1" width="100%" style="border: 1px solid #ddd">
+                    <tr>
+                        <th>Danh mục chi</th>
+                        <th>Tổng chi</th>
+                    </tr>
+
+                    @foreach (var item1 in @item.ExpenseDetails)
+                    {
+                        <tr>
+                            <td>@item1.CategoryName</td>
+                            <td>@item1.Sum.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                        </tr>
+                    }
+
+                </table>
+            </td>
+
+            <td colspan="2">
+                <table class="table" border="1" width="100%" style="border: 1px solid #ddd">
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Tổng chi</th>
+                        <th>Chi tiết</th>
+                    </tr>
+
+                    @foreach (var item1 in @item.DayExpenseDetails)
+                    {
+                        <tr>
+                            <td>@item1.Day</td>
+                            <td>@item1.Sum.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+
+                            <td>
+                                <table class="table" width="100%">
+                                    <tr>
+                                        <th>Danh mục chi</th>
+                                        <th>Tổng tiền</th>
+                                    </tr>
+
+                                    @foreach (var item2 in @item1.CategoryDayExpenseDetails)
+                                    {
+                                        <tr>
+                                            <td>@item2.CategoryName</td>
+                                            <td>@item2.Sum.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</td>
+                                        </tr>
+                                    }
+
+                                </table>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </td>
+        </tr>
+    }
+</table>
+
+<br /><br />
+<b>Tổng chi năm @DateTime.Now.Year :</b> @ViewBag.SummaryYear.ToString("C0", new System.Globalization.CultureInfo("vi-VN"));
+

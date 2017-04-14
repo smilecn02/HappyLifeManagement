@@ -17,8 +17,8 @@ namespace HappyLifeManagement.Data.Entity
         [Display(Name = "Tiền")]
         public decimal Amount { get; set; }
 
-        [Display(Name = "Địa điểm")]
-        public string Location { get; set; }
+        [Display(Name = "Ghi chú")]
+        public string Note { get; set; }
 
         [Display(Name = "Danh mục chi")]
         public Guid ExpenseCategoryId { get; set; }
