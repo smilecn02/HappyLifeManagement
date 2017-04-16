@@ -233,6 +233,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\NotesController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Migrations\201704120210420_Update12042017_02.cs" />
     <Compile Include="Migrations\201704120210420_Update12042017_02.Designer.cs">
@@ -268,10 +269,42 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\gallery.css" />
+    <Content Include="Content\material-photo-gallery-master\dist\css\material-photo-gallery.css" />
+    <Content Include="Content\material-photo-gallery-master\dist\js\material-photo-gallery.js" />
+    <Content Include="Content\material-photo-gallery-master\dist\js\material-photo-gallery.min.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Photos\yoga\Yoga_570d043114c410b712d5a71a.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d070314c410b712d5a71e.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d072514c410b712d5a71f.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d080614c410b712d5a720.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d093314c410b712d5a723.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d0b6314c410b712d5a726.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d0b8f14c410b712d5a727.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d111714c410b712d5a731.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d124714c410b712d5a734.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d129714c410b712d5a736.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d12ad14c410b712d5a737.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d12e714c410b712d5a738.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d139614c410b712d5a739.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d143814c410b712d5a73a.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d16f814c410b712d5a73c.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d17fc14c410b712d5a744.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570d181d14c410b712d5a745.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd3dd14c410b712d5a74b.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd48114c410b712d5a74d.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd4a014c410b712d5a74e.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd4cb14c410b712d5a750.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd4ea14c410b712d5a751.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd54014c410b712d5a753.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd55f14c410b712d5a755.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd5c514c410b712d5a758.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd62514c410b712d5a75a.jpeg" />
+    <Content Include="Photos\yoga\Yoga_570fd65e14c410b712d5a75c.jpeg" />
+    <Content Include="Photos\yoga\Yoga_5710eb3814c410b712d5a77a.jpeg" />
     <Content Include="Scripts\app\datepicker.js" />
     <Content Include="Scripts\app\home-index.js" />
     <Content Include="Scripts\bootstrap-datetimepicker.js" />
@@ -385,6 +418,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\material-photo-gallery-master\dist\css\material-photo-gallery.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -456,6 +490,8 @@
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Expenses\Statistics.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

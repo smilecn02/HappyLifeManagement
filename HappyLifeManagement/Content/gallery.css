@@ -1,0 +1,43 @@
+﻿body {
+	background: #fefefe;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/*font-family: 'Roboto Mono';*/
+}
+
+h2 {
+	font-weight: 300;
+	margin: 4vh 4vw;
+	letter-spacing: 3px;
+	color: grey;
+	text-transform: uppercase;
+}
+
+.demo-btn {
+	display: inline-block;
+	margin: 0 2.5px 4vh 2.5px;
+	text-decoration: none;
+	color: grey;
+	padding: 15px;
+	line-height: 1;
+	min-width: 140px;
+	background: rgba(0,0,0, 0.07);
+	border-radius: 6px;
+}
+
+.demo-btn:hover {
+	background: rgba(0,0,0,0.12);
+}
+
+/*@media (max-width: 640px) {
+
+	.demo-btn {
+		min-width: 0;
+		font-size: 14px;
+	}
+}*/
+
+footer {
+    padding-top: 20px;
+    clear: both;
+}

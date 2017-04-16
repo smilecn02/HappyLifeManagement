@@ -6,6 +6,14 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link href="~/Content/material-photo-gallery-master/dist/css/material-photo-gallery.css" rel="stylesheet" />
+
+
+    <link href="~/Content/gallery.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,7 +38,9 @@
                         </ul>
                     </li>
 
+                    <li>@Html.ActionLink("Gallery", "Index", "Gallery", new { area = "" }, new { target = "_blank" })</li>
                     <li>@Html.ActionLink("Contact", "Index", "Contact", new { area = "" }, null)</li>
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -47,5 +57,15 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script>
+        $(function () {
+            //Utility when input amount of money.
+            $('#Amount').on('blur', function () {
+                $(this).val($(this).val().replace('k', '000')
+                                         .replace('K', '000'));
+            });
+        })
+    </script>
 </body>
 </html>
