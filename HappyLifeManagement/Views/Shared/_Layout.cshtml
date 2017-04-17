@@ -58,14 +58,6 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
-    <script>
-        $(function () {
-            //Utility when input amount of money.
-            $('#Amount').on('blur', function () {
-                $(this).val($(this).val().replace('k', '000')
-                                         .replace('K', '000'));
-            });
-        })
-    </script>
+    <script src="~/Scripts/app/replace-k-in-amount.js"></script>
 </body>
 </html>
