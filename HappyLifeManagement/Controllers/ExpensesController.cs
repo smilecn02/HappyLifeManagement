@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Linq;
 using HappyLifeManagement.Models;
 using PagedList;
+using System.Data.Entity.Core.Objects;
 
 namespace HappyLifeManagement.Controllers
 {
@@ -17,12 +18,20 @@ namespace HappyLifeManagement.Controllers
         private HappyLifeManagementContext db = new HappyLifeManagementContext();
 
         // GET: Expenses
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string searchDate = "")
         {
             int pageSize = 10;
             int pageNumber = (page ?? 1);
 
-            var expenses = db.Expenses.Include(e => e.ExpenseCategory);
+            ViewBag.searchDate = searchDate;
+
+            DateTime expenseDate;
+
+            DateTime.TryParse(searchDate, out expenseDate);
+
+            var expenses = db.Expenses.Include(e => e.ExpenseCategory)
+                .Where(i => expenseDate == DateTime.MinValue || DbFunctions.TruncateTime(i.ExpenseDate) == expenseDate.Date);
+
             return View(expenses.OrderByDescending(i => i.ExpenseDate).ToPagedList(pageNumber, pageSize));
         }
 

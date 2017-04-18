@@ -7,9 +7,30 @@
 
 <h2>Quản lý chi tiêu</h2>
 
-<p>
-    @Html.ActionLink("Tạo mới", "Create", null, new { @class = "btn btn-success" })
-</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.ActionLink("Tạo mới", "Create", null, new { @class = "btn btn-success" })
+        </div>
+
+        @using (Html.BeginForm("Index", "Expenses", FormMethod.Get, new { @class = "form-inline" }))
+        {
+            <div class='col-sm-4 pull-right'>
+                <div class="form-group">
+                    <span>
+                        <input type='text' class="form-control" id="searchDate" name="searchDate" value="@ViewBag.searchDate" />
+                        <input type="submit" value="Tìm theo ngày" class="btn btn-primary" />
+                    </span>       
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<br />
 
 <table class="table">
     <tr>

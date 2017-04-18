@@ -3,3 +3,7 @@
         format: "DD/MM/YYYY"
     }); //Initialise any date pickers
 });
+
+$('#searchDate').datetimepicker({
+    format: 'DD/MM/YYYY'
+});
