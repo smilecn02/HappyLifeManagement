@@ -6,4 +6,9 @@ namespace HappyLifeManagement.Data
     {
         Guid Id { get; set; }
     }
+
+    public interface IEntity<TKey>
+    {
+        TKey Id { get; set; }
+    }
 }

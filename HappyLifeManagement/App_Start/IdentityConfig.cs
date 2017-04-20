@@ -1,4 +1,5 @@
-﻿using HappyLifeManagement.Models;
+﻿using HappyLifeManagement.Data.Entity;
+using HappyLifeManagement.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;

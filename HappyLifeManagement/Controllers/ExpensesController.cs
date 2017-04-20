@@ -1,18 +1,18 @@
 ﻿using HappyLifeManagement.Data;
 using HappyLifeManagement.Data.Entity;
+using HappyLifeManagement.Models;
+using PagedList;
 using System;
 using System.Data.Entity;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using System.Linq;
-using HappyLifeManagement.Models;
-using PagedList;
-using System.Data.Entity.Core.Objects;
+using Microsoft.AspNet.Identity;
 
 namespace HappyLifeManagement.Controllers
 {
-    [Authorize(Users = "khactrinhcn02@gmail.com")]
+    [Authorize(Users = "khactrinhcn02@gmail.com,thaingocmaitrinh@gmail.com")]
     public class ExpensesController : Controller
     {
         private HappyLifeManagementContext db = new HappyLifeManagementContext();
@@ -29,8 +29,11 @@ namespace HappyLifeManagement.Controllers
 
             DateTime.TryParse(searchDate, out expenseDate);
 
+            string userId = User.Identity.GetUserId();
+
             var expenses = db.Expenses.Include(e => e.ExpenseCategory)
-                .Where(i => expenseDate == DateTime.MinValue || DbFunctions.TruncateTime(i.ExpenseDate) == expenseDate.Date);
+                .Where(i => (expenseDate == DateTime.MinValue || DbFunctions.TruncateTime(i.ExpenseDate) == expenseDate.Date) &&
+                            i.UserId == userId);
 
             return View(expenses.OrderByDescending(i => i.ExpenseDate).ToPagedList(pageNumber, pageSize));
         }
@@ -41,7 +44,10 @@ namespace HappyLifeManagement.Controllers
 
             DateTime endDateOfThisMonth = new DateTime(now.Year, now.Month, DateTime.DaysInMonth(now.Year, now.Month));
 
-            var summaryQuery = db.Expenses.GroupBy(i => new { i.ExpenseDate.Month, i.ExpenseDate.Year })
+            string userId = User.Identity.GetUserId();
+
+            var summaryQuery = db.Expenses
+                .Where(i => i.UserId == userId).GroupBy(i => new { i.ExpenseDate.Month, i.ExpenseDate.Year })
                 .Select(i => new ExpenseSummaryViewModel
                 {
                     Month = i.Key.Month + "/" + i.Key.Year,
@@ -83,8 +89,9 @@ namespace HappyLifeManagement.Controllers
 
             ViewBag.SummaryQuery = summaryQuery;
 
-            ViewBag.SummaryYear = db.Expenses.Where(i => i.ExpenseDate.Year == now.Year)
-                                            .Sum(i => i.Amount);
+            var expenseYears = db.Expenses.Where(i => i.UserId == userId && i.ExpenseDate.Year == now.Year);
+
+            ViewBag.SummaryYear = expenseYears.Any() ? expenseYears.Sum(i => i.Amount) : 0;
 
             return View();
         }
@@ -121,6 +128,8 @@ namespace HappyLifeManagement.Controllers
             if (ModelState.IsValid)
             {
                 expense.Id = Guid.NewGuid();
+                expense.UserId = User.Identity.GetUserId();
+
                 db.Expenses.Add(expense);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -155,6 +164,7 @@ namespace HappyLifeManagement.Controllers
         {
             if (ModelState.IsValid)
             {
+                expense.UserId = User.Identity.GetUserId();
                 db.Entry(expense).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
