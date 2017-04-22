@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ResponsiveSlides.js &middot; Responsive jQuery slideshow</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link href="css/responsiveslides.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/demo.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/responsiveslides.js"></script>
+    <script>
+    $(function () {
+      $("#slider1").responsiveSlides({
+        maxwidth: 1000,
+        speed: 800
+      });
+    
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <ul class="rslides" id="slider1">
+            <li><img src="images/collection02/1.jpg" alt=""></li>
+            <li><img src="images/collection02/2.jpg" alt=""></li>
+            <li><img src="images/collection02/3.jpg" alt=""></li>
+            <li><img src="images/collection02/4.jpg" alt=""></li>
+        </ul>
+
+
+     </div>
+</body>
+</html>

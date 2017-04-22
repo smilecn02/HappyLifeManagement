@@ -29,19 +29,19 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td class="col-md-2">
             @Html.ActionLink(item.Title, "Details", new { id = item.Id })
         </td>
-        <td>
+        <td class="col-md-6">
             @Html.Raw(item.Content)
         </td>
-        <td>
+        <td class="col-md-1">
             <span class="label label-primary">@item.Tags</span>
         </td>
-        <td>
+        <td class="col-md-1">
             @Html.DisplayFor(modelItem => item.UpdatedDate)
         </td>
-        <td>
+        <td class="col-md-2">
             @Html.ActionLink("Sửa", "Edit", new { id = item.Id }, new { @class = "btn btn-success btn-xs" })
             @Html.ActionLink("Chi tiết", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-xs" })
             @Html.ActionLink("Xóa", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
